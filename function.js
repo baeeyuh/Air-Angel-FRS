@@ -10,3 +10,16 @@ function activeLink() {
 
 list.forEach((item) => item.addEventListener("mouseover", activeLink));
 
+// Close dropdown when clicking outside
+document.addEventListener("click", function(event) {
+  const userIcon = document.querySelector(".user");
+  const dropdown = document.querySelector(".dropdown");
+  
+  if (!userIcon.contains(event.target)) {
+    dropdown.style.display = "none";
+  } else {
+    dropdown.style.display = "block";
+  }
+});
+
+

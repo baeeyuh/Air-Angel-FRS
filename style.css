@@ -19,11 +19,11 @@
 body, html {
   min-height: 100vh;
   overflow-x: hidden;
-    background-image: url(/images/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container {
@@ -199,13 +199,69 @@ body, html {
   font-size: 1.2rem;
 }
 
-.user ion-icon {
+.user {
   position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
+  margin-right: 20px; /* Adjust this if you want more spacing */
   cursor: pointer;
 }
+
+.user ion-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.user .dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: -20px; /* Adjust based on your positioning preference */
+  background-color: var(--white);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+  width: 120px; /* Set the width of the dropdown */
+  padding: 10px 0;
+}
+
+.user:hover .dropdown {
+  display: block;
+}
+
+.user .dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user .dropdown ul li {
+  padding: 10px;
+  text-align: center;
+}
+
+.user .dropdown ul li a {
+  text-decoration: none;
+  color: var(--black1);
+}
+
+.user .dropdown ul li:hover {
+  background-color: var(--gray);
+}
+
+/* Arrow (Pointer) Styling */
+.user .dropdown .arrow {
+  position: absolute;
+  top: -10px;
+  right: 20px; /* Position based on alignment */
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid var(--white);
+  z-index: 10;
+}
+
+
+
 
 
